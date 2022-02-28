@@ -1,8 +1,14 @@
 import React from 'react'
+import {  } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className="Footer">
+    <p>About Us</p>
+    <p>Contact Us</p>
+    <p>Terms and Condition</p>
+    </div>
+
   )
 }
 
