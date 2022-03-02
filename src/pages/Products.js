@@ -23,11 +23,13 @@ function Products() {
     }, []);
 
   return (
-    <div>Products
+    <div>
+      
+      <h1>Our Products</h1>
         {
                 ProductList.map( product => (
                     <article key={product._id}>
-                        <Link to={`/product/${product._id}`}><p>{product.content} - {product.date}</p></Link>
+                        <Link to={`/product/${product._id}`}><p>{product.description} - {product.name}</p></Link>
                     </article>
                 ))
             }
