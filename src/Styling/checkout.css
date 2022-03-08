@@ -1,0 +1,55 @@
+.nothing-in-checkout-page{
+margin: 8rem;
+}
+
+.checkout-btn{
+color: #D18CAA;
+text-align: center;
+font-size: 3rem;
+}
+
+.go-back-text{
+text-align: center;
+font-size: 3rem;
+}
+
+.back-to-homepage-btn{
+padding: 1rem;
+margin-left: 17rem;
+margin-top: 2rem;
+background-color: #D18CAA;
+
+}
+.checkout-img{
+width: 15rem;
+height: 20rem;
+}
+
+.info-in-checkout{
+text-align: center;
+font-size: 10px;
+margin-left: 2rem;
+}
+.payment-title{
+    color: #D18CAA;
+    text-align: center;
+    font-size: 2rem;
+}
+.product-parent-checkout{
+    display: flex;
+margin: 8rem;
+padding-left: 5rem;
+}
+.input-info-container{
+display: flex;
+flex-direction: column;
+}
+
+.payment-chart{
+text-align: center;
+font-size: 20px;
+}
+
+.place-order-btn{
+height: 2rem;
+}
