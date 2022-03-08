@@ -1,6 +1,6 @@
-import React,{useState, useEffect}from 'react'
+import React, { useState, useEffect } from 'react'
 
-function Productpage({ addToCart, open, setOpen }) {
+function Productpage({ addProducts}) {
   const [upload, setUpload] = useState([]);
 
   const fetchData = async () => {
@@ -15,7 +15,7 @@ function Productpage({ addToCart, open, setOpen }) {
 
   const handleAddBtn = (upload) => {
     console.log('You just added an item')
-    addToCart(upload)
+    addProducts(upload)
   }
   return (
     <div>

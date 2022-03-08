@@ -1,0 +1,34 @@
+.shoe-items{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: flex;
+background-color: #CCE2FC;
+padding: 4rem;
+}
+
+.shoe-title{
+text-align: center;
+font-size: 2rem;
+font-weight: bold;
+margin-bottom: 5rem;
+}
+
+.shoe-img{
+display: flex;
+margin-left: 4rem;
+float: left;
+}
+
+.shoe-description{
+display: flex;
+flex-direction: column;
+float: right;
+text-align: center;
+width: 13rem;
+height: auto;
+margin-right: 4rem;
+}
+
+.addproduct-button{
+    margin-top: 3rem;
+    height: 4rem;
+}

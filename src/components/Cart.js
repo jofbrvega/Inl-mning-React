@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 
 
-function Cart({toCart, setToCart, opencartmenu,setOpen, open}) 
+function Cart({items, setOpen, open, sum}) 
 {
   return (
     <Style className={`cart ${open && 'open'}`}>
@@ -14,13 +14,15 @@ function Cart({toCart, setToCart, opencartmenu,setOpen, open})
       <button>Go to Cart</button> 
 
 
-    {toCart && toCart.map(c => (
+    {items && items.map(c => (
       <div className='cart-container'>
       <h2 className='carttitle' >{c.title}</h2>
       <span className='cartprice'>{c.price}</span>
       <img className='cartproduct' src={c.url}></img>
       </div>
-    ))} 
+    ))}
+
+    <div>Order summary {sum}</div> 
 
       </Style> 
 
