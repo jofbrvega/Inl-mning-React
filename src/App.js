@@ -1,23 +1,38 @@
 import './App.css';
-import React from 'react';
-import Products from './components/Products';
-import Nav from './components/Nav';
+import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Welcome from './components/Welcome';
-import About from './components/About';
-import Contact from './components/Contact';
+import Header from './components/Header';
+import Productpage from './Pages/Productpage';
 
 
 function App() {
+  const [toCart, setToCart] = useState([]); // item
+  const [open, setOpen] = useState(false);
+  
+
+  const addToCart = (newAddtocart) => {
+    setToCart([
+      ...toCart,
+      newAddtocart
+    ])
+
+   
+  }
+
   return (
-    <div className="App">
+    <div className="App"> 
       <BrowserRouter>
+        <Header
+        open = {open}
+        setOpen={setOpen} 
+        toCart={toCart} 
+        setToCart={setToCart} 
+        countCartItem={toCart.length} 
+        />
        <Routes> 
           <Route path='/' element={<Welcome />}></Route>
-          <Route path='/home' element={<Products />}></Route>
-          <Route path='/nav' element={<Nav />}></Route>
-          <Route path='/about' element={<About/>}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/home' element={<Productpage open = {open} setOpen={setOpen} addToCart={addToCart} toCart={toCart} setToCart={setToCart} countCartItem={toCart.length}/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
