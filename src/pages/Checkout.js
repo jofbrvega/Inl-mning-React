@@ -16,7 +16,7 @@ function Checkout({ items, sum }) {
 
     <div className='nothing-in-checkout-page'>
       <h2 className='go-back-text'>Nothing to submit, go back to shopping!</h2>
-      <Link to="/"><button className='back-to-homepage-btn'>Back to products </button></Link>
+      <Link to="/productpage"><button className='back-to-homepage-btn'>Back to products </button></Link>
       {items?.map(i => (
         <p>ID: {i.id}</p>
       ))}

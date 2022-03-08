@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function Productpage({ addProducts}) {
   const [upload, setUpload] = useState([]);
@@ -26,7 +27,7 @@ function Productpage({ addProducts}) {
             <div className='product-box'>
               <img className='product-image' src={upload.url} alt="image"></img>
               <div className='product-description'>
-                <button className='title'>{upload.title}</button>
+                <Link to="/product:id"><button className='title'>{upload.title}</button></Link>
                 <span className='price'>{upload.price}</span>
                 <span className='description'>{upload.description}</span>
                 <button className='btn-add' onClick={() => { handleAddBtn(upload) }}> Add To Cart </button>

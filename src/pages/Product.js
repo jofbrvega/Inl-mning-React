@@ -4,9 +4,9 @@ import '../Styling/product.css'
 import { Link } from 'react-router-dom'
 
 
-function ProductPage({ addProducts }) {
+function ProductPage({ addProducts, items, setItems }) {
 
-  const [shoes, setProducts] = useState({});
+  const [shoes, setProducts] = useState([]);
   const params = useParams();
 
   const fetchData = async () => {

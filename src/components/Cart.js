@@ -1,8 +1,10 @@
 // Detta är kundvarukorgen
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import styled from 'styled-components'
+
 
 
 
@@ -10,21 +12,19 @@ function Cart({items, setOpen, open, sum})
 {
   return (
     <Style className={`cart ${open && 'open'}`}>
-      <div className='closeBtn' onClick={() => setOpen(false)}><AiOutlineShoppingCart /></div>
-      <button>Go to Cart</button> 
-
-
+      <div className='closeBtn' onClick={() => setOpen(false)}><button><AiOutlineShoppingCart /></button></div>
+      
     {items && items.map(c => (
       <div className='cart-container'>
       <h2 className='carttitle' >{c.title}</h2>
       <span className='cartprice'>{c.price}</span>
       <img className='cartproduct' src={c.url}></img>
-      </div>
+      </div> 
     ))}
 
-    <div>Order summary {sum}</div> 
-
-      </Style> 
+    <div>Order summary {sum}</div>
+    <Link to='/checkout'>Go to checkout</Link>      
+      </Style>
 
   
   )   

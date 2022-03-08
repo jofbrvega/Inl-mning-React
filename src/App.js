@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
-import { 
-  BrowserRouter, Routes, Route,
+import {
+  BrowserRouter, Routes, Route, Link,
 } from 'react-router-dom';
 import Header from './components/Header';
 import Product from './Pages/Product';
@@ -15,11 +15,11 @@ function App() {
   const [sum, setSum] = useState(0);
 
   const addProducts = (newItem) => {
-    setItems ([
+    setItems([
       ...items,
       newItem
     ])
-    
+
     if (sum === 0) {
       setSum(newItem.price)
     } else {
@@ -28,38 +28,38 @@ function App() {
   }
   return (
     <div className="App">
-      <Header 
+      <BrowserRouter>
+      <Header
         open={open}
         setOpen={setOpen}
         items={items}
         setItems={setItems}
         countCartItem={items.length}
         sum={sum}
-      />
-      <BrowserRouter>
+      /> 
         <Routes>
           <Route path='/productpage' element=
-            {<Productpage 
+            {<Productpage
               open={open}
               setOpen={setOpen}
               addProducts={addProducts}
-              items={items} 
+              items={items}
               setItems={setItems}
-              countCartItem={items.length} 
-              />}/>
+              countCartItem={items.length}
+            />} />
           <Route path="product/:id" element=
             {<Product
               addProducts={addProducts} />}>
           </Route>
           <Route path="/checkout" element=
-          {<Checkout 
-          sum={sum}
-           items={items} 
-           addProducts={addProducts} />}>
-           </Route>
+            {<Checkout
+              sum={sum}
+              items={items}
+              addProducts={addProducts} />}>
+          </Route>
         </Routes>
         <Footer />
-      </BrowserRouter>  
+      </BrowserRouter>
     </div>
   );
 }
