@@ -1,0 +1,17 @@
+.product-container{
+text-align: center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+
+.products-title{
+text-align: center;
+padding: 2rem;
+color: #D18CAA;
+}
+.product-description{
+
+}

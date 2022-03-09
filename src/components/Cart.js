@@ -4,6 +4,10 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import '../Styling/cart.css'
+
+
+
 
 function Cart({items, setOpen, open, sum}) 
 {

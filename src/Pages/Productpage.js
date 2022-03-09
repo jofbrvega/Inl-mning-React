@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import '../Styling/products.css' 
 
 function Productpage({ addProducts}) {
   const [upload, setUpload] = useState([]);
@@ -25,8 +26,9 @@ function Productpage({ addProducts}) {
 
   return (
     <div>
+      <h1 className='products-title'>Our Products</h1>
       <div className='product-container'>
-        <h1>Productpage</h1>
+        
         {upload.map((upload) => (
           <div key={upload.id} >
             <div className='product-box'>
@@ -36,7 +38,7 @@ function Productpage({ addProducts}) {
                   {" "}
                   <img className='product-image' src={upload.url} alt={upload.title}></img>
                   </Link>
-                <span className='price'>{upload.price}</span>
+                <span className='price'>{upload.price + ' SEK'}</span>
                 <span className='description'>{upload.description}</span>
                 <button className='btn-add' onClick={() => { handleAddBtn(upload) }}> Add To Cart </button>
               </div>
