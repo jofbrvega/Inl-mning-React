@@ -34,7 +34,7 @@ width: 20rem;
 }
 .shoe-price, .shoe-quantity{
 font-size: 15px;
-margin-left: 20px;
+margin-left: 5rem;
 }
 
 
@@ -43,7 +43,7 @@ margin-top: 3rem;
 padding: 1rem;
 width: 15rem;
 height: 6rem;
-margin-right: 15rem;
+margin-left: 2rem;
 color: whitesmoke;
 border: 1px solid whitesmoke;
 background-color: #D18CAA;
