@@ -20,7 +20,7 @@ function Header({ open, setOpen, items, setItems, countCartItem, sum, checkout }
     <div>
       <header className='header'>
         <div className='header-name'>
-          <Link to="/productpage"><h1 >INSERTNAMEHERE</h1></Link>
+          <Link to="/productpage"><h1 className='logo'>INSERTNAMEHERE</h1></Link>
         </div>
         <div className='cart-container'>
           <div className='header-cart'>

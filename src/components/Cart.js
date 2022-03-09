@@ -12,7 +12,8 @@ function Cart({items, setOpen, open, sum})
 {
   return (
     <Style className={`cart ${open && 'open'}`}>
-      <div className='closeBtn' onClick={() => setOpen(false)}><button><AiOutlineShoppingCart /></button></div>
+      <div className='openBtn' onClick={() => setOpen(false)}><button><AiOutlineShoppingCart /></button></div>
+      <div className='closeBtn' onClick={() => setOpen(true)}><button>Close cart</button></div>
       
     {items && items.map(c => (
       <div className='cart-container'>
