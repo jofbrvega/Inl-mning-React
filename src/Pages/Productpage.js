@@ -8,26 +8,34 @@ function Productpage({ addProducts}) {
     const response = await fetch('https://codexplained.se/shoes.php');
     const data = await response.json();
     console.log(data)
-    setUpload(data);
+    setUpload(data); 
   }
+
   useEffect(() => {
     fetchData();
-  }, [])
+  }, []);
 
   const handleAddBtn = (upload) => {
-    console.log('You just added an item')
     addProducts(upload)
   }
+ 
+  const handleClick = (upload) => {
+    addProducts(upload)
+  }
+
   return (
     <div>
       <div className='product-container'>
         <h1>Productpage</h1>
-        {upload.map((upload, id) => (
+        {upload.map((upload) => (
           <div key={upload.id} >
             <div className='product-box'>
-              <img className='product-image' src={upload.url} alt="image"></img>
+              
               <div className='product-description'>
-                <Link to="/product:id"><button className='title'>{upload.title}</button></Link>
+                <Link to={`/product/${upload.id}`}>
+                  {" "}
+                  <img className='product-image' src={upload.url} alt={upload.title}></img>
+                  </Link>
                 <span className='price'>{upload.price}</span>
                 <span className='description'>{upload.description}</span>
                 <button className='btn-add' onClick={() => { handleAddBtn(upload) }}> Add To Cart </button>

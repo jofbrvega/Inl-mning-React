@@ -34,7 +34,7 @@ function Cart({items, setOpen, open, sum})
 const Style = styled.div`
   width: 500px;
   height: 500px;
-  background: red;
+  background: pink;
   position: absolute;
   top: 0;
   right: 0;

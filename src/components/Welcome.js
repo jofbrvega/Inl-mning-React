@@ -6,7 +6,7 @@ function Welcome() {
   return (
     <div>
       <h1>Välkommen!</h1>
-      <a href='/home'>Klicka här för att komma till shoppingsidan</a>
+      <a href='/productpage'>Klicka här för att komma till shoppingsidan</a>
     </div>
   )
 }

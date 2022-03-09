@@ -4,7 +4,9 @@ import '../Styling/product.css'
 import { Link } from 'react-router-dom'
 
 
-function ProductPage({ addProducts, items, setItems }) {
+function Product({ addProducts, items, setItems  }) {
+  
+  console.log('hej');
 
   const [shoes, setProducts] = useState([]);
   const params = useParams();
@@ -12,10 +14,13 @@ function ProductPage({ addProducts, items, setItems }) {
   const fetchData = async () => {
     try {
       const response = await fetch('https://codexplained.se/shoes.php?id=' + params.id);
+      
       const data = await response.json();
       console.log(data);
+      
 
       setProducts(data);
+      console.log(shoes)
 
     } catch (error) {
       console.log(error);
@@ -26,15 +31,17 @@ function ProductPage({ addProducts, items, setItems }) {
     fetchData();
   }, []);
 
+  
+
   const handleClick = (shoes) => {
     addProducts(shoes)
   }
 
+  
 
   return (
 
     <div className='shoe-items'>
-
       <article key={shoes.id}>
         <div className='shoe-info'>
           <p className='shoe-title'>{'Our Bestseller - ' + shoes.title}</p>
@@ -47,6 +54,10 @@ function ProductPage({ addProducts, items, setItems }) {
             <button className='addproduct-button' onClick={() => handleClick(shoes)}>Add to cart</button>
           </div>
 
+          {items?.map(i => (
+            <p>ID: {i.id}</p>
+          ))} 
+
         </div>
       </article>
       <Link to='/checkout'>Checkout</Link>
@@ -56,4 +67,4 @@ function ProductPage({ addProducts, items, setItems }) {
 
 }
 
-export default ProductPage
+export default Product

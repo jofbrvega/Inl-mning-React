@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import {
   BrowserRouter, Routes, Route, Link,
 } from 'react-router-dom';
+import Welcomepage from './components/Welcome'
 import Header from './components/Header';
 import Product from './Pages/Product';
 import Productpage from './Pages/Productpage';
@@ -38,6 +39,7 @@ function App() {
         sum={sum}
       /> 
         <Routes>
+          <Route path='/' element={<Welcomepage/>}></Route>
           <Route path='/productpage' element=
             {<Productpage
               open={open}
@@ -47,9 +49,10 @@ function App() {
               setItems={setItems}
               countCartItem={items.length}
             />} />
-          <Route path="product/:id" element=
+          <Route path="/product/:id" element=
             {<Product
-              addProducts={addProducts} />}>
+              addProducts={addProducts}
+               />}>
           </Route>
           <Route path="/checkout" element=
             {<Checkout
