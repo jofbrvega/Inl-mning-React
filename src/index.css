@@ -48,11 +48,11 @@ color:#D1CCB0;
 }
 
 /* Här är Kundkorgs knappen */
-.cart-container{
-      display: flex;
-      gap: 1em;
-      justify-content: center;
-}
+/* .cart-container{ */
+      /* display: flex; */
+      /* gap: 1em; */
+      /* justify-content: center; */
+/* } */
 
 .logo {
      color:white; 

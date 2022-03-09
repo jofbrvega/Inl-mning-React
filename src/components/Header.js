@@ -8,14 +8,6 @@ import {Link} from 'react-router-dom'
 function Header({ open, setOpen, items, setItems, countCartItem, sum, checkout }) { //item
   const [opencart, setOpenCart] = useState(false);
 
-
-  const addToCart = (addToCart) => {
-    console.log('You just clicked this')
-    setOpenCart([...opencart, addToCart])
-  }
-
-
-
   return (
     <div>
       <header className='header'>
@@ -25,17 +17,18 @@ function Header({ open, setOpen, items, setItems, countCartItem, sum, checkout }
         <div className='cart-container'>
           <div className='header-cart'>
 
-            <button onClick={() => { setOpen(true) }}>
-              <Cart
-                open={open}
+            <button onClick={() => {setOpen(true)}}>
+            <Cart 
                 items={items}
                 setItems={setItems}
+                open={open}
                 setOpen={setOpen}
                 sum = {sum}
-              />
+              /> 
               {countCartItem}
               <AiOutlineShoppingCart />
             </button>
+            
 
 
           </div>
