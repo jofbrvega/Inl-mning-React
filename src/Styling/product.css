@@ -23,12 +23,28 @@ display: flex;
 flex-direction: column;
 float: right;
 text-align: center;
-width: 13rem;
+width: 15rem;
 height: auto;
-margin-right: 4rem;
+margin-right: 5rem;
 }
 
+.shoe-about{
+font-size: 17px;
+width: 20rem;
+}
+.shoe-price, .shoe-quantity{
+font-size: 15px;
+margin-left: 5rem;
+}
+
+
 .addproduct-button{
-    margin-top: 3rem;
-    height: 4rem;
+margin-top: 3rem;
+padding: 1rem;
+width: 15rem;
+height: 6rem;
+margin-left: 2rem;
+color: whitesmoke;
+border: 1px solid whitesmoke;
+background-color: #D18CAA;
 }

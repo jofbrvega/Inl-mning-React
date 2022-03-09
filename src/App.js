@@ -1,14 +1,15 @@
 import './App.css';
 import React, { useState } from 'react';
 import {
-  BrowserRouter, Routes, Route, Link,
+  BrowserRouter, Routes, Route,
 } from 'react-router-dom';
 import Welcomepage from './components/Welcome'
 import Header from './components/Header';
-import Product from './Pages/Product';
-import Productpage from './Pages/Productpage';
+import Product from './pages/Product';
+import Productpage from './pages/Productpage';
 import Footer from './components/Footer';
-import Checkout from './Pages/Checkout';
+import Checkout from './pages/Checkout';
+
 
 function App() {
   const [items, setItems] = useState([]);
