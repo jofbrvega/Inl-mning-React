@@ -4,6 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import styled from 'styled-components'
+import '../Styling/cart.css'
 
 
 

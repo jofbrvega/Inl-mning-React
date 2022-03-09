@@ -1,6 +1,7 @@
 // Detta är hämtaAPI funktionen som komponent.
 import React, { useState, useEffect } from 'react'
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import '../Styling/header.css'
  
 
 function Uploadproduct() {

@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Cart from './Cart';
 import {Link} from 'react-router-dom'
+import '../Styling/header.css'
 
 function Header({ open, setOpen, items, setItems, countCartItem, sum, checkout }) { //item
   const [opencart, setOpenCart] = useState(false);
@@ -20,7 +21,7 @@ function Header({ open, setOpen, items, setItems, countCartItem, sum, checkout }
     <div>
       <header className='header'>
         <div className='header-name'>
-          <Link to="/productpage"><h1 className='logo'>INSERTNAMEHERE</h1></Link>
+          <Link to="/productpage"><h1 className='logo'>Our name</h1></Link>
         </div>
         <div className='cart-container'>
           <div className='header-cart'>

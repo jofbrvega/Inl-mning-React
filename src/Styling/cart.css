@@ -1,0 +1,21 @@
+/* Här är Kundkorgs knappen */
+.cart-container{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.logo {
+   color:white; 
+}
+
+
+.cartprice{
+   font-weight: 200;
+   justify-content: center;
+}
+
+.cartproduct{
+    height: 30px;
+    width: 30px;
+}
