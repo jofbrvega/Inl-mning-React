@@ -5,11 +5,6 @@
     justify-content: center;
 }
 
-.logo {
-   color:white; 
-}
-
-
 .cartprice{
    font-weight: 200;
    justify-content: center;
@@ -19,3 +14,19 @@
     height: 30px;
     width: 30px;
 }
+
+.cart-header {
+ background-color: pink;
+ border-radius: 2px;
+ outline: none;
+ border: none;
+ width: 150px;
+}
+
+.cart-header:hover 
+{background-color: rgb(238, 232, 233)
+}
+
+
+
+    

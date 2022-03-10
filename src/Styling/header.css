@@ -5,10 +5,27 @@
     line-height: 3rem;
     text-align: center;
     padding: 2rem;
-    background-color: #D18CAA;
-    color:#D1CCB0;
+    background-color: #d18caa;
+    background-image: linear-gradient(160deg, #d18caa 0%, #ecc3d5 100%);
+    color:#ebd771;
     text-decoration: none;
+    justify-content: center;
+    
 
 }
+
+.logo {
+   color:white; 
+   text-decoration: none;
+   font-size: 50px;
+   font-family: 'Permanent Marker', cursive;
+}
+
+.header-cart{
+    margin-top: -20px;
+    margin-left: 0;
+
+}
+
 
 

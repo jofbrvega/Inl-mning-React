@@ -25,22 +25,25 @@ function Productpage({ addProducts}) {
   }
 
   return (
-    <div>
+    <div className='product-pagecontainer'>
       <h1 className='products-title'>Our Products</h1>
       <div className='product-container'>
         
         {upload.map((upload) => (
-          <div key={upload.id} >
+          <div className='items' key={upload.id} >
             <div className='product-box'>
-              
               <div className='product-description'>
                 <Link to={`/product/${upload.id}`}>
                   {" "}
                   <img className='product-image' src={upload.url} alt={upload.title}></img>
                   </Link>
+                  <div className='description-box'>
                 <span className='price'>{upload.price + ' SEK'}</span>
                 <span className='description'>{upload.description}</span>
+                <div className='button-div'>
                 <button className='btn-add' onClick={() => { handleAddBtn(upload) }}> Add To Cart </button>
+              </div>        
+              </div>
               </div>
             </div>
           </div>

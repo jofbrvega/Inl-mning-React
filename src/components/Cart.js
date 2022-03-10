@@ -11,7 +11,6 @@ import '../Styling/cart.css'
 
 function Cart({items, setOpen, open, sum}) 
 {
-  const [closecart, setClosecart] = useState(false);
   return (
     
     <Style 
@@ -27,7 +26,7 @@ function Cart({items, setOpen, open, sum})
       </div> 
     ))}
         
-    <div>Order summary {sum}</div>
+    <div className='sum'>Order summary {sum}</div>
     <Link to='/checkout'>Go to checkout</Link>     
     </Style> 
   
