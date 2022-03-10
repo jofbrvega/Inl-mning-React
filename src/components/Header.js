@@ -14,7 +14,7 @@ function Header({ open, setOpen, items, setItems, countCartItem, sum }) {
         <div className='header-name'>
           <Link to="/productpage" style={{ textDecoration: 'none' }}><h1  className='logo'>Kickass Kicks</h1></Link>
         </div>
-        <div className='cart-container'>
+        <div className='cart-containerheader'>
           <div className='header-cart'>
 
             <button className='cart-header' onClick={() => {setOpen(true)}}>
@@ -27,6 +27,7 @@ function Header({ open, setOpen, items, setItems, countCartItem, sum }) {
               /> 
               {countCartItem}
               <AiOutlineShoppingCart />
+              
             </button>
             
 

@@ -60,7 +60,6 @@ function Product({ addProducts, items, setItems  }) {
 
         </div>
       </article>
-      <Link to='/checkout'>Checkout</Link>
 
     </div>
   )

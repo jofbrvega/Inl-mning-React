@@ -1,32 +1,45 @@
-/* Här är Kundkorgs knappen */
-.cart-container{
-    display: flex;
-    gap: 1em;
-    justify-content: center;
+.menu-buttons{
+    display: inline-flex;
+    padding: 1em;
 }
 
-.cartprice{
-   font-weight: 200;
-   justify-content: center;
+
+.cart-container{
+    display: flex;
+    gap: 2em; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border: 1px pink ridge; 
+    color: rgb(255, 255, 255); 
 }
 
 .cartproduct{
-    height: 30px;
-    width: 30px;
+ width: 50px;
+ height: 50px;
 }
 
-.cart-header {
- background-color: pink;
- border-radius: 2px;
- outline: none;
- border: none;
- width: 150px;
+.carttitle{
+    font-style: italic
 }
 
-.cart-header:hover 
-{background-color: rgb(238, 232, 233)
+.cartprice{
+    font-size: 15px;
+    font-style: oblique;
 }
 
+.menu-footer{
+    padding: 1em;
+    font-size: small;
+    color: white;
+}
 
+.summary {
+    font-style: italic;
+}
 
-    
+.go-tocheckout{
+   border: ridge 1px pink; 
+   color: white;
+   font-size: 30px;
+}

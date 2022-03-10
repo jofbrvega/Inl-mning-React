@@ -15,19 +15,20 @@ function Cart({items, setOpen, open, sum})
     
     <Style 
     className={`cart ${open && 'open'}`}>
-      <div className='openBtn' onClick={() => setOpen(false)}><button><AiOutlineShoppingCart /></button></div>
-      <div className='closeBtn' onClick={() => setOpen(true)}><button>Close cart</button></div>
-     
+
     {items && items.map(c => (
       <div className='cart-container'>
-      <h2 className='carttitle' >{c.title}</h2>
-      <span className='cartprice'>{c.price}</span>
       <img className='cartproduct' src={c.url}></img>
+      <h2 className='carttitle' >{c.title}</h2>
+      <span className='cartprice'>{c.price}KR</span>
+      
       </div> 
     ))}
-        
-    <div className='sum'>Order summary {sum}</div>
-    <Link to='/checkout'>Go to checkout</Link>     
+    
+    <div className='menu-footer'>
+    <div className='summary'>Order summary {sum}KR</div>
+        <Link to='/checkout' className='go-tocheckout'  style={{ textDecoration: 'none' }}>Go to checkout</Link>     
+      </div>
     </Style> 
   
   )   
@@ -39,7 +40,7 @@ const Style = styled.div`
   width: 400px;
   max-height: 500px ;
   background: pink;
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   transition: 500ms;

@@ -1,8 +1,38 @@
 .welcome-container{
-text-align: center;
+display: flex;
 background-color: whitesmoke;
 padding-top: 10rem;
 padding-bottom: 10rem;
+justify-content: space-around;
+max-width: 100%;
+}
+
+.welcome{
+  display:block;
+  justify-content: center;
+  padding: 5em;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.click-here{
+padding: 5em;
+display: block;
+justify-content: center;
+line-height: 140px;
+font-family: 'Permanent Marker', cursive; 
+animation-duration: 3s;
+animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .welcome-title{

@@ -40,7 +40,12 @@ function App() {
         sum={sum}
       /> 
         <Routes>
-          <Route path='/' element={<Welcomepage/>}></Route>
+          <Route path='/' element=
+          {<Welcomepage
+            open={open}
+            setOpen={setOpen}
+          />}>
+            </Route>
           <Route path='/productpage' element=
             {<Productpage
               open={open}
