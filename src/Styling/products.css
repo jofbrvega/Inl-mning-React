@@ -34,7 +34,7 @@ justify-content: center;
   box-shadow: 2px;
   background-color: #d18caa;
   border-radius: 5px; 
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .description-box{
@@ -50,17 +50,17 @@ line-height: 1.5;
 font-size: 0.7em;
 background: #fafafa;
 max-height: 100%;
-margin-top: 2em;
+margin-top: 0;
 }
 
 .product-description > span {
   display:table; 
-  margin: 0 auto; 
+  margin: 1 auto; 
 }
 
 .product-image{
   width: 100%; 
-  height: 11em; 
+  height: 12em; 
 }
 
 .description-box{
