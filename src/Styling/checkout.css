@@ -8,6 +8,7 @@ flex-direction: column;
 color: #D18CAA;
 text-align: center;
 font-size: 3rem;
+font-family: 'Permanent Marker', cursive; 
 }
 
 .go-back-text{
@@ -35,6 +36,7 @@ margin-top: 2rem;
 color: whitesmoke;
 border: 1px solid whitesmoke;
 background-color: #D18CAA;
+align-items: center;
 
 }
 .checkout-img{

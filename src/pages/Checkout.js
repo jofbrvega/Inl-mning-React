@@ -6,15 +6,10 @@ import { useEffect } from 'react'
 
 function Checkout({ items, sum }) {
 
-
   useEffect(() => {
-
-    console.log(items)
-
   }, [items])
 
   let content = (
-
     <div className='nothing-in-checkout-page'>
       <h2 className='go-back-text'>Nothing to submit, go back to shopping!</h2>
       <Link to="/productpage"><button className='back-to-homepage-btn'>Back to products </button></Link>
@@ -22,16 +17,12 @@ function Checkout({ items, sum }) {
         <p>ID: {i.id}</p>
       ))}
     </div>
-
   )
 
   if (items.length >= 1) {
-
     content = (
-
       <div className='product-parent-checkout'>
         <div className='checkout-container'>
-
           {items.map(shoes => (
             <table info-parent-checkout>
               <tr className='info-in-checkout'>
@@ -40,49 +31,29 @@ function Checkout({ items, sum }) {
                 <td>< h2 className='price-checkout'>{shoes.price} SEK</h2></td>
               </tr>
             </table>
-
-
           ))}
-
-
         </div>
-
-
 
         <div className='input-info-container'>
-
           <h2 className='payment-title'>Payment</h2>
           <h3 className='payment-info'>Please choose payment method in next step</h3>
-
           <label>Firstname:</label>
           <input type="text" namn="firstname" className='customer-form' />
-
           <label>Lastname:</label>
           <input type="text" namn="lastname" className='customer-form' />
-
           <label>Telephone:</label>
           <input type="text" namn="phonenumber" className='customer-form' />
-
           <label>E-mail:</label>
           <input type="text" namn="emailaddress" className='customer-form' />
-
           <label>Address:</label>
           <input type="text" namn="shippingaddress" className='customer-form' />
-
           <label>Zipcode:</label>
           <input type="text" namn="zipcode" className='customer-form' />
-
           <div className='payment-chart'>
-
-            
-          <button type='button' className='place-order-btn'>Place order</button>
+            <button type='button' className='place-order-btn'>Place order</button>
           </div>
-
           <div className='order-total'> Order summary: {sum} SEK</div>
-
-
         </div>
-
       </div>
     )
   }
@@ -91,9 +62,7 @@ function Checkout({ items, sum }) {
     <div className='checkout-wrapper'>
       <div className='checkout-products'>
         <h2 className='checkout-title'>Checkout</h2>
-
         {content}
-
       </div>
     </div>
   );

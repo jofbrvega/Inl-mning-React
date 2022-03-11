@@ -20,18 +20,19 @@ display: block;
 justify-content: center;
 line-height: 140px;
 font-family: 'Permanent Marker', cursive; 
-animation-duration: 3s;
-animation-name: slidein;
+animation: roll 3s;
+transform: rotate(30deg);
+opacity: .7;
+/* animation-duration: 3s;
+animation-name: slidein; */
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 300%;
-    width: 100%;
+@keyframes roll {
+  0% {
+    transform: rotate(0);
   }
-  to {
-    margin-left: 0%;
-    width: 100%;
+  100% {
+    transform: rotate(360deg);
   }
 }
 

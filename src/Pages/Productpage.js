@@ -19,10 +19,6 @@ function Productpage({ addProducts}) {
   const handleAddBtn = (upload) => {
     addProducts(upload)
   }
- 
-  const handleClick = (upload) => {
-    addProducts(upload)
-  }
 
   return (
     <div className='product-pagecontainer'>
